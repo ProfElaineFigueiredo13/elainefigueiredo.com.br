@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elaine Figueiredo - Currículo Oficial (PDF)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #120F1D;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #111827;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px;
+      min-height: 100vh;
+    }
+    .top-toolbar {
+      width: 100%;
+      max-width: 850px;
+      background: #1D182C;
+      border: 1px solid rgba(209, 196, 233, 0.3);
+      border-radius: 16px;
+      padding: 14px 20px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: #D1C4E9;
+      color: #281442;
+      box-shadow: 0 0 15px rgba(209, 196, 233, 0.3);
+    }
+    .btn-primary:hover {
+      background: #fff;
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.08);
+      color: #eae1d4;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.16);
+    }
+    .paper-sheet {
+      width: 100%;
+      max-width: 850px;
+      background: #ffffff;
+      padding: 48px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+      font-size: 11px;
+      line-height: 1.4;
+      color: #111827;
+      text-align: justify;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+      color: #000;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 8px;
+    }
+    .contact-line {
+      text-align: center;
+      font-size: 10px;
+      color: #555;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 14px;
+    }
+    .contact-line a {
+      color: #0d47a1;
+      text-decoration: none;
+    }
+    .section-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #000;
+      border-bottom: 1.5px solid #000;
+      padding-bottom: 2px;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+    p {
+      margin-bottom: 6px;
+    }
+    ul {
+      padding-left: 18px;
+      margin-bottom: 8px;
+    }
+    li {
+      margin-bottom: 3px;
+    }
+    .exp-title {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 11px;
+      margin-top: 8px;
+      margin-bottom: 2px;
+      color: #000;
+    }
+    .exp-title span:last-child {
+      font-weight: 600;
+      color: #555;
+      font-size: 10px;
+    }
+    .keywords {
+      font-size: 9.5px;
+      color: #444;
+      line-height: 1.5;
+    }
+    @media print {
+      @page {
+        size: A4;
+        margin: 12mm 15mm;
+      }
+      body {
+        background: #fff !important;
+        padding: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .paper-sheet {
+        max-width: 100% !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+      }
+      a {
+        color: #000 !important;
+        text-decoration: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Toolbar -->
+  <div class="top-toolbar no-print">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="/" class="btn btn-secondary">
+        <span class="material-symbols-outlined" style="font-size: 16px;">arrow_back</span>
+        Voltar ao Portal
+      </a>
+      <span style="font-size: 11px; color: #D1C4E9; font-family: monospace;">Modelo Oficial A4</span>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <button onclick="window.print()" class="btn btn-primary">
+        <span class="material-symbols-outlined" style="font-size: 16px;">print</span>
+        IMPRIMIR / GERAR PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- Sheet Document -->
+  <div class="paper-sheet" id="print-doc">
+    <h1>ELAINE FIGUEIREDO</h1>
+    <div class="subtitle">Consultora de Inteligência Artificial | Ciência de Dados | Análise de Negócios | Professora Universitária</div>
+    <div class="contact-line">
+      SP | (11) 999479666 | <a href="mailto:profelainefigueiredo@outlook.com">profelainefigueiredo@outlook.com</a> | <a href="https://www.linkedin.com/in/elainefigueiredo/" target="_blank">https://www.linkedin.com/in/elainefigueiredo/</a> | Portfólio/Site: <a href="https://www.elainefigueiredo.com.br" target="_blank">www.elainefigueiredo.com.br</a>
+    </div>
+
+    <div class="section-title">RESUMO PROFISSIONAL</div>
+    <p>
+      Profissional de Tecnologia, Dados e Inteligência Artificial com trajetória multidisciplinar em docência universitária, análise de negócios, engenharia de software, banco de dados, ciência de dados e aplicação estratégica de IA. Desde 2006, atua na formação de profissionais de TI e na tradução de problemas complexos em soluções orientadas a dados, automação, governança e inovação. Diferencia-se pela combinação entre visão acadêmica, capacidade consultiva, pensamento analítico e comunicação executiva, conectando tecnologia, negócio, educação e transformação digital para gerar impacto mensurável em projetos, equipes e organizações. Busca oportunidades como Cientista de Dados / Consultora de IA / Analista de Negócios Sênior / Professora de Pós-graduação.
+    </p>
+
+    <div class="section-title">COMPETÊNCIAS-CHAVE</div>
+    <p><strong>Inteligência Artificial e Dados:</strong> IA aplicada, Machine Learning, ciência de dados, CRISP-DM, MLOps, engenharia de prompts, análise preditiva, modelagem semântica, ontologias, NLP.</p>
+    <p><strong>Análise de Negócios e Produto:</strong> Levantamento de requisitos, discovery, documentação funcional, análise de processos, priorização, gestão de stakeholders, OKRs/KPIs, tomada de decisão data-driven.</p>
+    <p><strong>Banco de Dados e Engenharia:</strong> SQL, modelagem relacional/dimensional, ETL/ELT, data warehouse, integração de sistemas, APIs, arquitetura de software, microsserviços Python | Java.</p>
+    <p><strong>Educação e Liderança Técnica:</strong> Docência no ensino superior, desenho instrucional, mentoria, palestras, facilitação de workshops, comunicação técnica para públicos executivos e acadêmicos.</p>
+
+    <div class="section-title">EXPERIÊNCIA PROFISSIONAL</div>
+    
+    <div class="exp-title">
+      <span>Consultora em Tecnologia, Inteligência Artificial, Dados e Transformação Digital | Capco Consultoria | São Paulo-SP - Remoto</span>
+      <span>| 07/2024 – 05/2026</span>
+    </div>
+    <ul>
+      <li>Conduziu diagnósticos de maturidade digital e oportunidades de IA, traduzindo objetivos de negócio em roadmaps práticos com foco em [redução de custos / aumento de produtividade / crescimento de receita].</li>
+      <li>Desenhou soluções orientadas a dados para [área/produto], estruturando indicadores, pipelines, modelos analíticos e critérios de governança para apoiar decisões executivas.</li>
+      <li>Elaborou estratégias de adoção de IA generativa, engenharia de prompts e automação de processos, resultando em Automação e Documentação de Legados, Conversor de Código.</li>
+      <li>Facilitou workshops, briefings executivos e treinamentos para equipes multidisciplinares, elevando a compreensão sobre IA, dados e inovação em torno de 200 pessoas por ano.</li>
+    </ul>
+
+    <div class="exp-title">
+      <span>Professora Universitária em Tecnologia da Informação (Graduação e Pós) | USP-Esalq, SENAC-SP, SENAI-RS, Belas Artes – São Paulo</span>
+      <span>| 2022 – Atual (Remoto, Híbrido e Presencial)</span>
+    </div>
+    <ul>
+      <li>Ministra disciplinas de Banco de Dados, Design e Desenvolvimento de Serviços e Microsserviços, Interoperabilidade e Semântica, POO I e II (Programação Orientada a Objetos), Engenharia de Software, Cibersegurança em Sistemas de IA, Gestão de Projetos, Empreendedorismo e Liderança, Integração de Sistemas, Inteligência Artificial e temas correlatos para cursos de graduação e pós-graduação em tecnologia.</li>
+      <li>Desenvolveu planos de aula, avaliações, estudos de caso e projetos aplicados, conectando fundamentos teóricos a cenários reais de mercado, indústria e transformação digital.</li>
+      <li>Orientou estudantes em projetos acadêmicos e profissionais, apoiando a construção de soluções com [SQL / Python / APIs / BI / IA / Cloud], com impacto na vida de mais de 1000 alunos.</li>
+      <li>Contribuiu para a atualização curricular e disseminação de boas práticas em dados, IA, arquitetura de software e metodologias ágeis, fortalecendo a empregabilidade dos alunos.</li>
+    </ul>
+
+    <div class="exp-title">
+      <span>Analista de Negócios Sênior / Business Analyst | Setia, Prodata Mobility, Reportflex, Fortbras | São Paulo</span>
+      <span>| 02/2011 - 10/2019 (Presencial/Híbrido)</span>
+    </div>
+    <ul>
+      <li>Atuou como ponte entre áreas de negócio, tecnologia e usuários finais, estruturando requisitos, regras de negócio, fluxos, documentação funcional e critérios de aceite.</li>
+      <li>Mapeou processos críticos e identificou oportunidades de melhoria, apoiando iniciativas de digitalização, integração de sistemas e automação.</li>
+      <li>Apoiou squads e equipes técnicas na priorização de backlog, refinamento de histórias de usuário, validação de entregas e comunicação com stakeholders estratégicos.</li>
+      <li>Produziu análises, indicadores e relatórios executivos para tomada de decisão, reduzindo ambiguidades e aumentando a previsibilidade de entregas.</li>
+    </ul>
+
+    <div class="exp-title">
+      <span>Pesquisadora em Inteligência Artificial, Ontologias e Informática Biomédica | FACCAMP / CTI – Renato Archer | Campinas-SP</span>
+      <span>| 08/2018 - 02/2022</span>
+    </div>
+    <ul>
+      <li>Realizou pesquisa aplicada em Inteligência Artificial, representação do conhecimento, ontologias biomédicas e modelagem semântica para apoio a contextos complexos de saúde.</li>
+      <li>Investigou padrões, modelos e estruturas de interoperabilidade semântica, incluindo [OpenEHR/HL7/UMLS/ OWL / SPARQL / BioPortal], com foco em qualidade, interoperabilidade e reúso da informação.</li>
+      <li>Produziu revisão bibliográfica, análise conceitual e artefatos acadêmicos alinhados ao estado da arte, fortalecendo a base científica para aplicações de IA em domínios especializados.</li>
+      <li>Desenvolvimento do Framework BioFrame Semântico.</li>
+    </ul>
+
+    <div class="section-title">PRINCIPAIS RESULTADOS E CONQUISTAS MENSURÁVEIS</div>
+    <ul>
+      <li>Reduziu em 60% o tempo de análise, documentação ou execução de processos por meio de automação, padronização e uso de IA generativa.</li>
+      <li>Capacitou 10000 alunos/profissionais em temas de dados, IA, engenharia de software e integração de sistemas, com avaliação média de 9 - Promotor.</li>
+      <li>Contribuiu para 20 projetos de tecnologia, pesquisa ou consultoria, envolvendo requisitos, arquitetura, dados, IA, governança e comunicação com stakeholders.</li>
+    </ul>
+
+    <div class="section-title">HABILIDADES TÉCNICAS E COMPORTAMENTAIS</div>
+    <p><strong>Linguagens e Dados:</strong> Python, SQL, JavaScript, R (Básico), Java, análise exploratória de dados, modelagem de dados, data storytelling.</p>
+    <p><strong>IA, ML e Analytics:</strong> Machine Learning, IA generativa Life cycle, engenharia de prompts, NLP, ontologias, mineração de dados, CRISP-DM, SEMMA, KDD, MLOps.</p>
+    <p><strong>Bancos e BI:</strong> SQL Server, PostgreSQL, MySQL, MongoDB, modelagem dimensional, ETL/ELT, data Warehouse, datalakes, Power BI.</p>
+    <p><strong>Arquitetura e Integração:</strong> APIs REST, GraphQL, microsserviços, DDD, arquitetura hexagonal, mensageria, Docker, cloud [AWS/Azure/GCP].</p>
+    <p><strong>Gestão e Métodos:</strong> Scrum, Kanban, OKRs, análise de requisitos, documentação técnica, priorização de backlog, governança de dados, LGPD.</p>
+    <p><strong>Soft Skills:</strong> Comunicação executiva, didática, pensamento crítico, liderança técnica, facilitação, resolução de problemas, adaptabilidade, visão sistêmica.</p>
+
+    <div class="section-title">FORMAÇÃO ACADÊMICA</div>
+    <ul>
+      <li><strong>Doutorado em Ciência da Computação / Inteligência Artificial</strong> - UNICAMP, Status: Parcial, 2023. Pesquisa em ML Reinforcement Learning e Engenharia de Software Experimental.</li>
+      <li><strong>Mestrado em Ciência da Computação</strong> - FACCAMP, 2022. Ênfase em Inteligência Artificial e Ontologias Biomédicas aplicadas à oncologia.</li>
+      <li><strong>Pós-graduação em Psicopedagogia</strong> - FAIMI, 2008.</li>
+      <li><strong>Bacharelado em Sistemas de Informação</strong> - FAIMI, 2005.</li>
+    </ul>
+
+    <div class="section-title">CERTIFICAÇÕES E CURSOS RELEVANTES</div>
+    <ul>
+      <li>SmallTalk English Speaking Level Test - Certificado oficial EF SET 46/100 (B1 Intermediário).</li>
+      <li>Palc – Agile Leadership - AIB Institute.</li>
+    </ul>
+
+    <div class="section-title">PUBLICAÇÕES, PALESTRAS E PROJETOS SELECIONADOS</div>
+    <ul>
+      <li>The reuse of electronic health records information models in the oncology domain: Studies with the bioframe framework. - JOURNAL OF BIOMEDICAL INFORMATICS, p. 104704, 2024. Citações: 2 | 1 2024. Impacto: , v. 157.</li>
+      <li>Semântica em prontuários eletrônicos para oncologia pediátrica: uma revisão integrativa. - JHI - Journal Health Informatics, Journal Health Informatics, p. 61 - 69, 30 set. 2023.</li>
+      <li>Combate ao Covid19: Detecção em tempo real de indivíduos sem máscara em ambiente escolar por meio de Deep Learning. Brazilian eScience Workshop, 2021, Brasil. Anais do XV Brazilian e-Science Workshop (BRESCI 2021), 2021. p. 113.</li>
+      <li>A Multidimensional Framework for Semantic Electronic Health Records in Oncology Domain. 2021 IEEE 30th International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (WETICE), 2021, Bayonne. 2021 IEEE 30th International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (WETICE), 2021. p. 165.</li>
+      <li>Workshop Lunch and Learning – Tendências da Tecnologia e IA 2026, com 209 participantes e avaliação Excelente. 2026 - Capco.</li>
+      <li>Workshop Lunch and Learning – Engenharia de Prompt e Contexto – não só de chatgpt vive o homem moderno, com 301 participantes e avaliação Excelente. 2025 - Capco.</li>
+      <li>Workshop Lunch and Learning – Data Science & Machine Learning – Overview & Frameworks, com 179 participantes e avaliação Excelente. 2025 - Capco.</li>
+      <li>Workshop Minicurso: TTS e STT com Whisper da Open AI & Natural Language Processing - Capacitação em IA, com 500 participantes e avaliação Excelente – 2024 – SENAC – SP.</li>
+    </ul>
+
+    <div class="section-title">PALAVRAS-CHAVE - KEYWORDS</div>
+    <div class="keywords">
+      Inteligência Artificial | Ciência de Dados | Machine Learning | IA Generativa | Engenharia de Prompt | Análise de Negócios | Business Analysis | SQL | Python | Banco de Dados | BI | ETL | Data Warehouse | MLOps | Governança de Dados | APIs | Microsserviços | Engenharia de Software | Docência Superior | Pesquisa Aplicada | Transformação Digital | Agile | Scrum | LGPD
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('print') === 'true') {
+      window.addEventListener('load', () => {
+        setTimeout(() => window.print(), 300);
+      });
+    }
+  </script>
+</body>
+</html>

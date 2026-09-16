@@ -1,0 +1,50 @@
+name: Deploy to Hostinger (FTP)
+
+# Este workflow publica automaticamente os arquivos compilados da pasta dist/
+# diretamente para a pasta public_html da sua hospedagem Hostinger.
+#
+# Para ativar:
+# 1. No seu repositório no GitHub, vá em Settings > Secrets and variables > Actions
+# 2. Adicione os seguintes segredos (Secrets):
+#    - HOSTINGER_FTP_SERVER: Ex: ftp.seudominio.com.br ou o IP da Hostinger
+#    - HOSTINGER_FTP_USERNAME: Seu usuário de FTP da Hostinger
+#    - HOSTINGER_FTP_PASSWORD: Sua senha de FTP da Hostinger
+
+on:
+  workflow_dispatch: # Permite disparar manualmente pelo painel do GitHub
+  # push:
+  #   branches: [ main ] # Descomente para enviar automaticamente a cada push
+
+jobs:
+  deploy:
+    name: Build and Deploy to Hostinger
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Deploy via FTP to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        if: env.FTP_SERVER != ''
+        env:
+          FTP_SERVER: ${{ secrets.HOSTINGER_FTP_SERVER }}
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_SERVER }}
+          username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: ./public_html/
+          dangerous-clean-slate: false

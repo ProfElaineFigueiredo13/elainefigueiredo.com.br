@@ -1,0 +1,8 @@
+{
+  "name": "Elaine Figueiredo | Aura Intelligence",
+  "description": "Plataforma oficial de Elaine Figueiredo - Especialista em Inteligência Artificial, Dados, Arquitetura e Cursos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,11 @@
+# robots.txt for elainefigueiredo.com.br
+User-agent: *
+Allow: /
+Allow: /public/
+Allow: /curriculo.html
+
+# Disallow private paths if any
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://elainefigueiredo.com.br/sitemap.xml
