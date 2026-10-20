@@ -163,16 +163,22 @@ export const AboutView: React.FC<AboutViewProps> = ({ setCurrentView, onSelectLe
 
   return (
     <div className="py-12 px-4 md:px-6 max-w-[1240px] mx-auto min-h-[80vh]">
-      
       {/* Header Banner */}
       <div className="mb-12">
         <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full glass-card-bright border-[#D1C4E9]/20 font-mono text-xs text-[#D1C4E9]">
           <span className="material-symbols-outlined text-sm">person</span>
           {content.badge}
         </div>
-        <h1 className="font-headline text-3xl md:text-5xl font-extrabold text-[#D1C4E9] mb-4">
-          {content.title}
-        </h1>
+        <div className="flex items-center gap-3.5 sm:gap-4 mb-4">
+          <img
+            src="/assets/aistudio/LogoEFof_90669567.png"
+            alt="Logo Elaine Figueiredo"
+            className="w-12 h-12 sm:w-16 sm:h-16 object-contain rounded-full border border-[#D1C4E9]/40 p-0.5 bg-[#160e29] shadow-[0_0_18px_rgba(209,196,233,0.35)] shrink-0"
+          />
+          <h1 className="font-headline text-3xl md:text-5xl font-extrabold text-[#D1C4E9]">
+            {content.title}
+          </h1>
+        </div>
         <p className="font-sans text-lg text-[#d0c5af] max-w-3xl leading-relaxed">
           {content.subtitle}
         </p>
@@ -507,6 +513,42 @@ export const AboutView: React.FC<AboutViewProps> = ({ setCurrentView, onSelectLe
             </button>
           </div>
 
+        </div>
+      </section>
+
+      {/* Ecosystem & Pillars Infographic Card */}
+      <section className="mb-16">
+        <div className="glass-card rounded-3xl p-6 md:p-8 border border-[#D1C4E9]/30 relative overflow-hidden bg-gradient-to-br from-[#1B1429] via-[#0E0A17] to-[#120B20] shadow-[0_0_35px_rgba(209,196,233,0.12)]">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 border-b border-white/10 pb-4">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 mb-2 rounded-full bg-[#D1C4E9]/10 font-mono text-[11px] text-[#D1C4E9]">
+                <span className="material-symbols-outlined text-xs">schema</span>
+                AI ECOSYSTEM & FRAMEWORK // ELAINE FIGUEIREDO
+              </div>
+              <h2 className="font-headline text-2xl md:text-3xl font-extrabold text-[#D1C4E9]">
+                {language === 'pt'
+                  ? 'Ecossistema Integrado de Dados & Inteligência Artificial'
+                  : language === 'es'
+                  ? 'Ecosistema Integrado de Datos e Inteligencia Artificial'
+                  : language === 'fr'
+                  ? 'Écosystème Intégré de Données & Intelligence Artificielle'
+                  : language === 'it'
+                  ? 'Ecosistema Integrato di Dati & Intelligenza Artificiale'
+                  : 'Integrated Data & Artificial Intelligence Ecosystem'}
+              </h2>
+            </div>
+            <span className="font-mono text-xs text-[#9685B5] uppercase tracking-wider">
+              TECNOLOGIA • PESSOAS • GOVERNANÇA • IMPACTO
+            </span>
+          </div>
+
+          <div className="relative rounded-2xl overflow-hidden border border-[#D1C4E9]/20 bg-black/60 shadow-[0_0_30px_rgba(209,196,233,0.15)] flex justify-center items-center p-2 sm:p-4">
+            <img
+              src="/assets/aistudio/LogoEFof_90669567.png"
+              alt="Ecossistema de Dados & Inteligência Artificial - Elaine Figueiredo"
+              className="w-full max-w-4xl h-auto object-contain rounded-xl hover:scale-[1.01] transition-transform duration-500 shadow-2xl"
+            />
+          </div>
         </div>
       </section>
 

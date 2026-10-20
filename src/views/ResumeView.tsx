@@ -141,7 +141,6 @@ export const ResumeView: React.FC = () => {
 
   return (
     <div className="py-12 px-4 md:px-6 max-w-[1200px] mx-auto min-h-[80vh]">
-      
       {/* Header Banner */}
       <div className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
         <div>
@@ -149,9 +148,16 @@ export const ResumeView: React.FC = () => {
             <span className="material-symbols-outlined text-sm">description</span>
             {uiLabels.badge}
           </div>
-          <h1 className="font-headline text-3xl md:text-5xl font-extrabold text-[#D1C4E9] mb-2 tracking-tight">
-            {curriculum.name}
-          </h1>
+          <div className="flex items-center gap-3.5 mb-2">
+            <img
+              src="/assets/aistudio/LogoEFof_90669567.png"
+              alt="Logo Elaine Figueiredo"
+              className="w-12 h-12 sm:w-14 sm:h-14 object-contain rounded-full border border-[#D1C4E9]/40 p-0.5 bg-[#160e29] shadow-[0_0_15px_rgba(209,196,233,0.3)] shrink-0"
+            />
+            <h1 className="font-headline text-3xl md:text-5xl font-extrabold text-[#D1C4E9] tracking-tight">
+              {curriculum.name}
+            </h1>
+          </div>
           <p className="font-sans text-base md:text-lg text-[#d0c5af] max-w-3xl leading-relaxed">
             {curriculum.headline}
           </p>

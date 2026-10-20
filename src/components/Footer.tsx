@@ -144,12 +144,14 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentView }) => {
 
         {/* Main Footer Row */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-12">
-          <div className="flex items-center gap-4 group cursor-pointer" onClick={() => setCurrentView('home')}>
-            <span className="material-symbols-outlined text-[#D1C4E9] text-4xl group-hover:rotate-45 transition-transform duration-500">
-              memory
-            </span>
+          <div className="flex items-center gap-3.5 group cursor-pointer" onClick={() => setCurrentView('home')}>
+            <img
+              src="/assets/aistudio/LogoEFof_90669567.png"
+              alt="Logo Elaine Figueiredo"
+              className="w-11 h-11 object-contain rounded-full border border-[#D1C4E9]/40 p-0.5 bg-[#150f22] shadow-[0_0_15px_rgba(209,196,233,0.3)] group-hover:scale-105 group-hover:border-[#D1C4E9] transition-all duration-300 shrink-0"
+            />
             <div>
-              <span className="font-headline text-xl md:text-2xl font-bold text-[#D1C4E9] tracking-tighter block">
+              <span className="font-headline text-xl md:text-2xl font-bold text-[#D1C4E9] tracking-tighter block group-hover:text-white transition-colors">
                 ELAINE FIGUEIREDO
               </span>
               <span className="font-mono text-[10px] text-[#9685B5] uppercase tracking-widest block">

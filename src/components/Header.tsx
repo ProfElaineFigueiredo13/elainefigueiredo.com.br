@@ -21,20 +21,22 @@ export const Header: React.FC<HeaderProps> = ({ setCurrentView, toggleDrawer }) 
         {/* Logo Brand */}
         <button
           onClick={() => setCurrentView('home')}
-          className="flex items-center gap-2 sm:gap-3 group text-left cursor-pointer focus:outline-none shrink-0"
+          className="flex items-center gap-2.5 sm:gap-3 group text-left cursor-pointer focus:outline-none shrink-0"
           title="Ir para o Início"
         >
           <div className="relative flex items-center justify-center">
-            <span className="material-symbols-outlined text-[#D1C4E9] text-2xl sm:text-3xl group-hover:rotate-90 transition-transform duration-500">
-              memory
-            </span>
-            <div className="absolute inset-0 bg-[#D1C4E9]/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <img
+              src="/assets/aistudio/LogoEFof_90669567.png"
+              alt="Logo Elaine Figueiredo"
+              className="w-10 h-10 sm:w-11 sm:h-11 object-contain rounded-full border border-[#D1C4E9]/40 p-0.5 bg-[#150f22] shadow-[0_0_15px_rgba(209,196,233,0.35)] group-hover:scale-105 group-hover:border-[#D1C4E9] group-hover:shadow-[0_0_20px_rgba(209,196,233,0.6)] transition-all duration-300"
+            />
+            <div className="absolute inset-0 bg-[#D1C4E9]/20 blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
           </div>
           <div className="flex flex-col">
-            <span className="font-headline text-base sm:text-lg md:text-xl font-extrabold tracking-tighter text-[#D1C4E9]">
+            <span className="font-headline text-base sm:text-lg md:text-xl font-extrabold tracking-tighter text-[#D1C4E9] group-hover:text-white transition-colors">
               ELAINE FIGUEIREDO
             </span>
-            <span className="font-mono text-[9px] uppercase tracking-widest text-[#9685B5] opacity-80 -mt-1 hidden md:inline">
+            <span className="font-mono text-[9px] uppercase tracking-widest text-[#9685B5] opacity-80 -mt-1 hidden sm:inline">
               AI & DATA CONSULTANCY
             </span>
           </div>

@@ -88,10 +88,22 @@ export const CurriculoPdfView: React.FC<CurriculoPdfViewProps> = ({ onBack }) =>
   };
 
   return (
-    <div className="min-h-screen bg-[#120F1D] text-[#1E1E24] print:bg-white print:text-black print:min-h-0 print:p-0 py-8 px-4 flex flex-col items-center">
+    <div className="relative min-h-screen bg-[#120F1D] text-[#1E1E24] print:bg-white print:text-black print:min-h-0 print:p-0 py-8 px-4 flex flex-col items-center">
+      {/* Background Brand Graphic - Elaine Figueiredo IA (no-print) */}
+      <div className="no-print absolute inset-0 pointer-events-none overflow-hidden -z-0 select-none">
+        <div
+          className="absolute -top-10 left-1/2 -translate-x-1/2 w-full max-w-[1400px] h-[950px] bg-no-repeat bg-top bg-contain opacity-20 md:opacity-25"
+          style={{
+            backgroundImage: "url('/assets/aistudio/LogoEFof_90669567.png')",
+            maskImage: 'radial-gradient(ellipse at 50% 30%, black 20%, transparent 75%)',
+            WebkitMaskImage: 'radial-gradient(ellipse at 50% 30%, black 20%, transparent 75%)',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#120F1D]/80 to-[#120F1D]" />
+      </div>
       
       {/* Top Floating Control Bar (Hidden on Print) */}
-      <div className="no-print w-full max-w-[850px] mb-6 bg-[#1D182C] border border-[#D1C4E9]/30 rounded-2xl p-4 shadow-xl flex flex-wrap items-center justify-between gap-4 text-white">
+      <div className="no-print relative z-10 w-full max-w-[850px] mb-6 bg-[#1D182C] border border-[#D1C4E9]/30 rounded-2xl p-4 shadow-xl flex flex-wrap items-center justify-between gap-4 text-white">
         
         <div className="flex items-center gap-3">
           <button
@@ -196,14 +208,29 @@ export const CurriculoPdfView: React.FC<CurriculoPdfViewProps> = ({ onBack }) =>
       {/* Printable Paper Canvas (A4 Dimensions simulation on screen, exact on print) */}
       <div
         id="curriculum-document"
-        className="print-paper w-full max-w-[850px] bg-white text-[#111827] shadow-2xl rounded-none sm:rounded-sm p-8 sm:p-12 md:p-14 print:p-0 print:m-0 print:shadow-none print:w-full print:max-w-none text-left font-sans text-[11px] leading-[1.4] transition-all"
+        className="relative print-paper w-full max-w-[850px] bg-white text-[#111827] shadow-2xl rounded-none sm:rounded-sm p-8 sm:p-12 md:p-14 print:p-0 print:m-0 print:shadow-none print:w-full print:max-w-none text-left font-sans text-[11px] leading-[1.4] transition-all overflow-hidden"
         style={{ color: '#111827' }}
       >
+        {/* Subtle Watermark Background */}
+        <div
+          className="absolute inset-0 pointer-events-none bg-center bg-no-repeat bg-contain opacity-[0.035] select-none"
+          style={{
+            backgroundImage: "url('/assets/aistudio/LogoEFof_90669567.png')",
+          }}
+        />
+
         {/* Header Name & Roles */}
-        <div className="text-center mb-4">
-          <h1 className="text-2xl sm:text-[26px] font-extrabold tracking-wide text-black uppercase mb-1 font-sans">
-            {data.name}
-          </h1>
+        <div className="relative z-10 text-center mb-4">
+          <div className="flex items-center justify-center gap-3 mb-1.5">
+            <img
+              src="/assets/aistudio/LogoEFof_90669567.png"
+              alt="Logo Elaine Figueiredo"
+              className="w-9 h-9 sm:w-10 sm:h-10 object-contain rounded-full border border-purple-200 p-0.5 bg-slate-50 shrink-0"
+            />
+            <h1 className="text-2xl sm:text-[26px] font-extrabold tracking-wide text-black uppercase font-sans">
+              {data.name}
+            </h1>
+          </div>
           <p className="text-[12px] sm:text-[13px] text-gray-800 font-medium tracking-tight mb-2">
             {data.headline}
           </p>

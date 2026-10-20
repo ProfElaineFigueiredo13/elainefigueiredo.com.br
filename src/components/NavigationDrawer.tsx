@@ -46,13 +46,20 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
         <div className="flex flex-col gap-5 p-6 md:p-7 h-full bg-[radial-gradient(circle_at_top_right,rgba(209,196,233,0.08),transparent_60%)] overflow-y-auto">
           {/* Drawer Header */}
           <div className="flex justify-between items-center border-b border-white/10 pb-4">
-            <div>
-              <span className="font-headline text-xl font-bold text-[#D1C4E9] block">
-                Elaine Figueiredo
-              </span>
-              <span className="font-mono text-[10px] text-[#9685B5] uppercase tracking-widest block">
-                {t.nav.menuTitle}
-              </span>
+            <div className="flex items-center gap-3">
+              <img
+                src="/assets/aistudio/LogoEFof_90669567.png"
+                alt="Logo Elaine Figueiredo"
+                className="w-10 h-10 object-contain rounded-full border border-[#D1C4E9]/40 p-0.5 bg-[#160e29] shadow-[0_0_12px_rgba(209,196,233,0.3)] shrink-0"
+              />
+              <div>
+                <span className="font-headline text-lg sm:text-xl font-bold text-[#D1C4E9] block leading-tight">
+                  Elaine Figueiredo
+                </span>
+                <span className="font-mono text-[10px] text-[#9685B5] uppercase tracking-widest block">
+                  {t.nav.menuTitle}
+                </span>
+              </div>
             </div>
             <button
               className="p-2 hover:bg-white/10 rounded-full transition-colors text-[#eae1d4] cursor-pointer"

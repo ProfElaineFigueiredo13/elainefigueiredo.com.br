@@ -65,7 +65,7 @@ cd seu-repositorio
 # 2. Instale as dependências
 npm install --legacy-peer-deps
 
-# 3. Inicie o servidor de desenvolvimento
+# 3. Inicie o servidor de desenvolvimento (Hot Reload na porta 3000)
 npm run dev
 ```
 
@@ -73,14 +73,19 @@ Abra no navegador em `http://localhost:3000`.
 
 ---
 
-## 🛠️ Como Compilar para Produção
+## 🛠️ Como Compilar e Testar Localmente (Pré-Deploy)
 
-Execute o comando de build:
+Antes de enviar qualquer arquivo para a Hostinger, você pode compilar e simular o ambiente de produção exato localmente:
+
 ```bash
-npm run build
+# 1. Validação de tipos TypeScript e build de produção:
+npm run verify
+
+# 2. Executar servidor de prévia local da pasta dist/:
+npm run preview
 ```
 
-O comando gerará os arquivos estáticos otimizados na pasta **`dist/`**, incluindo o `index.html`, `.htaccess`, `sitemap.xml`, `robots.txt` e a pasta `assets/`.
+Abra a URL exibida (geralmente `http://localhost:4173/`). Se tudo funcionar perfeitamente, os arquivos da pasta **`dist/`** estão 100% validados para envio ao `public_html` da Hostinger.
 
 ---
 

@@ -37,15 +37,27 @@ Você tem duas maneiras muito simples de exportar do Google AI Studio para o seu
    ```bash
    npm install --legacy-peer-deps
    ```
-5. Para testar o site rodando localmente no seu computador:
+5. **Para testar em modo desenvolvimento (Live Reload):**
    ```bash
    npm run dev
    ```
-6. O terminal exibirá a URL local:
-   ```text
-   ➜ Local: http://localhost:3000/
+   Abra no navegador: `http://localhost:3000/`. Qualquer alteração salva no código será refletida instantaneamente.
+
+6. **Para compilar e testar a versão idêntica à que irá para a Hostinger:**
+   ```bash
+   # Valida TypeScript e compila o bundle minificado
+   npm run build
+
+   # Executa o servidor de prévia local da pasta dist/
+   npm run preview
    ```
-   Clique com `Ctrl + Clique` ou abra no navegador para ver as alterações em tempo real enquanto você edita os arquivos na pasta `src/`.
+   Abra a URL indicada (ex: `http://localhost:4173/`). Desta forma você navega exatamente pelos mesmos arquivos compilados, testando performance, rotas e comportamento final antes de subir qualquer arquivo.
+
+7. **Comando de verificação completa rápida:**
+   ```bash
+   npm run verify
+   ```
+   Ele executa a checagem rigorosa de tipos (`lint`) e o build de produção (`build`) em sequência. Se não houver nenhum erro no terminal, seu código está 100% pronto para a Hostinger.
 
 ---
 

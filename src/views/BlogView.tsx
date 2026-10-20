@@ -291,9 +291,11 @@ export const BlogView: React.FC<BlogViewProps> = ({ selectedPostId }) => {
             </h1>
 
             <div className="flex items-center gap-3 pb-6 border-b border-white/10 mb-6 font-mono text-xs text-[#d0c5af]">
-              <div className="w-8 h-8 rounded-full bg-[#D1C4E9]/20 border border-[#D1C4E9] flex items-center justify-center text-[#D1C4E9] font-bold">
-                EF
-              </div>
+              <img
+                src="/assets/aistudio/LogoEFof_90669567.png"
+                alt="Elaine Figueiredo"
+                className="w-9 h-9 rounded-full border border-[#D1C4E9] object-contain bg-[#160e29] p-0.5 shadow-sm"
+              />
               <div>
                 <span className="font-bold text-[#D1C4E9] block">{activeArticle.author}</span>
                 <span className="text-[10px] text-[#9685B5]">{t.blogView.authorRole}</span>

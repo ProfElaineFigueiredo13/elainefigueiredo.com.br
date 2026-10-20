@@ -89,9 +89,16 @@ export const ContactView: React.FC = () => {
           <span className="material-symbols-outlined text-sm">mail</span>
           {t.contactView.badge}
         </div>
-        <h1 className="font-headline text-3xl md:text-5xl font-extrabold text-[#D1C4E9] mb-4">
-          {t.contactView.title}
-        </h1>
+        <div className="flex items-center gap-3.5 sm:gap-4 mb-4">
+          <img
+            src="/assets/aistudio/LogoEFof_90669567.png"
+            alt="Logo Elaine Figueiredo"
+            className="w-12 h-12 sm:w-14 sm:h-14 object-contain rounded-full border border-[#D1C4E9]/40 p-0.5 bg-[#160e29] shadow-[0_0_15px_rgba(209,196,233,0.3)] shrink-0"
+          />
+          <h1 className="font-headline text-3xl md:text-5xl font-extrabold text-[#D1C4E9]">
+            {t.contactView.title}
+          </h1>
+        </div>
         <p className="font-sans text-lg text-[#d0c5af] max-w-3xl leading-relaxed">
           {t.contactView.subtitle}
         </p>

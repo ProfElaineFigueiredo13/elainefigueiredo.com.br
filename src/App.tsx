@@ -126,8 +126,24 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0B0910] text-[#eae1d4] flex flex-col font-sans selection:bg-[#D1C4E9]/30">
+    <div className="min-h-screen bg-[#0B0910] text-[#eae1d4] flex flex-col font-sans selection:bg-[#D1C4E9]/30 relative">
       
+      {/* Global Background Watermark - Elaine Figueiredo */}
+      <div 
+        className="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none"
+        aria-hidden="true"
+      >
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[1400px] h-[92vh] bg-no-repeat bg-center bg-contain opacity-15 md:opacity-20 pointer-events-none"
+          style={{
+            backgroundImage: "url('/assets/aistudio/LogoEFof_90669567.png')",
+            maskImage: 'radial-gradient(ellipse at center, black 35%, transparent 75%)',
+            WebkitMaskImage: 'radial-gradient(ellipse at center, black 35%, transparent 75%)',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B0910]/40 via-transparent to-[#0B0910]/70 pointer-events-none" />
+      </div>
+
       {/* Sticky Top Bar */}
       <Header
         currentView={currentView}
@@ -144,7 +160,7 @@ export default function App() {
       />
 
       {/* Main View Router */}
-      <main className="flex-1">
+      <main className="flex-1 relative z-10">
         {currentView === 'home' && (
           <HomeView
             setCurrentView={handleNavView}
